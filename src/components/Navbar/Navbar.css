@@ -1,0 +1,128 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 170px; /* Remove top and bottom margin */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it to the left */
+    right: 0; /* Position it to the right */
+   /* Add a background color for visibility */
+    z-index: 1000; /* Ensure it stays above other elements */
+    padding: 10px 0; /* Optional: Add some padding for aesthetics */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+
+.nav-connect {
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(267deg, #1cd532 0.36%, #1f07d7 102.06%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover {
+    transform: scale(1.05);
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    position: relative; /* Needed for the underline positioning */
+}
+
+.nav-menu li img {
+    display: flex;
+    margin: auto;
+}
+
+.anchor-link {
+    text-decoration: none;
+    color: white;
+}
+
+/* Add underline effect on hover */
+.nav-menu li:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px; /* Adjust the position of the underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* Color of the underline */
+}
+
+/* Set fixed sizes for menu icons */
+.nav-close,
+.nav-open {
+    width: 30px; /* Set desired width */
+    height: 30px; /* Set desired height */
+}
+
+.nav-close {
+    display: none; /* Initially hidden */
+}
+
+.nav-open {
+    display: none; /* Initially hidden */
+}
+
+/* Adjust the size of the sahan image */
+.navbar img:first-child {
+    width: 100px; /* Increased width for sahan image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media(max-width:768px) {
+    .navbar {
+        margin: 0 50px; /* Adjust side margins for smaller screens */
+    }
+
+    .nav-connect {
+        display: none;
+    }
+
+    .nav-open {
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+
+    .nav-close {
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+    }
+
+    .nav-menu {
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1f0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+
+    .nav-menu li {
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+}

@@ -1,0 +1,152 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    margin: 80px 170px;
+}
+.con-title{
+    position: relative;
+}
+.con-title h1{
+    padding: 0px 30px;
+    font-size: 80px;
+    font-weight: 500;
+}
+.con-title img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+.con-section{
+    display: flex;
+    gap: 150px;
+}
+.con-left{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.con-left h1{
+    font-size: 80px;
+    font-weight: 600;
+    background: linear-gradient(270deg, #087bdf 70%, #0612c1 80%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.con-left p{
+    max-width: 550px;
+    color: #D6D6D6;
+    font-size: 20px;
+    line-height: 35px;
+}
+.con-details{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: #D6D6D6;
+    font-size: 22px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.con-right{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+}
+.con-right label{
+    color: #D6D6D6;
+    font-size: 22px;
+    font-weight: 400;
+}
+.con-right input{
+    border: none;
+    width: 700px;
+    height: 78px;
+    padding-left: 20px;
+    border-radius: 4px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: outfit;
+    font-size: 20px;
+}
+.con-right textarea{
+    width: 650px;
+    border: none;
+    padding: 25px;
+    border-radius: 25px;
+    background: #32323c;
+    color: #A0A0A0;
+    font-family: outfit;
+    font-size: 20px;
+}
+.submit{
+    border: none;
+    color: white;
+    border-radius: 50px;
+    background: linear-gradient(264deg, #dd6316 -5.09%, #0e7ec8 106.28%);
+    font-size: 22px;
+    padding: 20px 60px;
+    margin-bottom: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.submit:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+@media(max-width:768px){
+    .contact{
+        gap: 50px;
+        margin: 50px 70px;
+        align-items: start;
+
+    }
+    .con-title{
+        padding: 0;
+        font-size: 50px;
+        font-weight: 500;
+    }
+    .con-title img{
+        width: 130px;
+        margin-right: -20px;
+    }
+    .con-section{
+        flex-direction: column;
+    }
+    .con-left h1{
+        font-size: 54px;
+    }
+    .con-left p{
+        font-size: 18px;
+    }
+    .details{
+        gap: 20px;
+    }
+    .details img{
+        width: 25px;
+    }
+    .con-right label{
+        font-size: 20px;
+    }
+    .con-right input{
+        width: 100%;
+        font-size: 20px;
+    }
+    .con-right textarea{
+        width: 95%;
+        font-size: 20px;
+    }
+    .submit{
+        font-size: 20px;
+        padding: 15px 40px  ;
+    }
+
+}
